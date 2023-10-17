@@ -1,0 +1,42 @@
+export const mockData = [
+  {
+    organization: 'Empresa A',
+    name: 'João Silva',
+    identityNumber: '18469831003',
+    cellphone: '99999999999',
+    oldCode: 9876543,
+    preferredUnit: 'Unidade 1',
+  },
+  {
+    organization: 'Empresa B',
+    name: 'Maria Santos',
+    identityNumber: '17064288044',
+    cellphone: '88888888888',
+    oldCode: 1234567,
+    preferredUnit: 'Unidade 2',
+  },
+  {
+    organization: 'Empresa C',
+    name: 'Pedro Oliveira',
+    identityNumber: '65152421070',
+    cellphone: '77777777777',
+    oldCode: 5432109,
+    preferredUnit: 'Unidade 3',
+  },
+  {
+    organization: 'Empresa D',
+    name: 'Ana Pereira',
+    identityNumber: '95418147005',
+    cellphone: '66666666666',
+    oldCode: 9876543,
+    preferredUnit: 'Unidade 1',
+  },
+  {
+    organization: 'Empresa E',
+    name: 'Lucas Santos',
+    identityNumber: '33034317018',
+    cellphone: '55555555555',
+    oldCode: 7654321,
+    preferredUnit: 'Unidade 2',
+  },
+]
