@@ -14,10 +14,10 @@ export function Header() {
   return (
     <header className="flex items-center justify-between bg-white px-12 py-6">
       <div className="flex items-center justify-start gap-4">
-        <Button variant="secondary">
-          <PlusCircle />
-          <span className="font-inter text-sm font-semibold leading-5">
-            Novo Atendimento
+        <Button type="button" variant="secondary" className="px-4 py-[10px]">
+          <PlusCircle className="h-5 w-5" />
+          <span className="w-32 font-inter text-sm font-semibold leading-5">
+            Novo atendimento
           </span>
         </Button>
 
@@ -25,7 +25,7 @@ export function Header() {
           <Input.Prefix>
             <MagnifyingGlass className="h-5 w-5 text-tertiary" />
           </Input.Prefix>
-          <Input.Control placeholder="Buscar" />
+          <Input.Control placeholder="Buscar usuário" />
         </Input.Root>
       </div>
 

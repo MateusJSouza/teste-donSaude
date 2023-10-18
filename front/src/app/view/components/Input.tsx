@@ -18,16 +18,21 @@ export function Control(props: InputControlProps) {
   )
 }
 
-type InputRootProps = ComponentProps<'div'>
+type InputRootProps = ComponentProps<'div'> & {
+  rounded?: boolean
+}
 
 export function Root(props: InputRootProps) {
+  const { rounded, className, ...rest } = props
+
   return (
     <div
       className={twMerge(
-        'flex w-64 max-w-full items-center gap-2 rounded-full border border-zinc-300 px-3 py-2 font-inter text-sm leading-6 text-tertiary',
-        props.className,
+        'flex w-full items-center gap-2 rounded-full border border-zinc-300 px-3 py-2 font-inter text-sm leading-6 text-tertiary',
+        rounded && 'rounded-xl',
+        className,
       )}
-      {...props}
+      {...rest}
     />
   )
 }
