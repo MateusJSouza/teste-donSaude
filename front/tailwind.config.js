@@ -24,6 +24,7 @@ export default {
         tertiary: '#667085',
         'shape-secondary': '#EAECF0',
         secondary: '#475467',
+        success: '#C2ED79',
       },
     },
   },
