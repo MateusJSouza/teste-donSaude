@@ -13,11 +13,13 @@ export function Router() {
         <Route element={<ListPartnerLayout />}>
           <Route path="/" element={<ListPartners />} />
           <Route path="/new" element={<PartnerFormInfo />} />
-          <Route path="/address" element={<PartnerFormAddress />} />
 
           <Route element={<PartnerLayoutForm />}>
-            <Route path="/info" element={<PartnerFormInfo />} />
-            <Route path="/address" element={<PartnerFormAddress />} />
+            <Route path="/partner/new/info" element={<PartnerFormInfo />} />
+            <Route
+              path="/partner/new/address"
+              element={<PartnerFormAddress />}
+            />
           </Route>
         </Route>
       </Routes>

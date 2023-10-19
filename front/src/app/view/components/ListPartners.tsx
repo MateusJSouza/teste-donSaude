@@ -14,7 +14,7 @@ export function ListPartners() {
         <h1 className="text-2xl font-bold text-content">Parceiros</h1>
 
         <Button type="button">
-          <Link className="flex gap-2" to="/info">
+          <Link className="flex gap-2" to="/partner/new/info">
             <PlusCircle className="h-5 w-5" />
             <span className="font-inter text-sm font-semibold leading-5">
               Adicionar parceiro

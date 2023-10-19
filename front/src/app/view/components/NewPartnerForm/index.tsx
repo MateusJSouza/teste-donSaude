@@ -100,7 +100,7 @@ export function NewPartnerForm() {
         <Button variant="ghost" className="px-20 py-[10px]">
           Cancelar
         </Button>
-        <Link to="/address">
+        <Link to="/partner/new/address">
           <Button className="px-[94px] py-[10px]">Próxima</Button>
         </Link>
       </div>
