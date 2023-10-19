@@ -1,5 +1,6 @@
 import { ComponentProps } from 'react'
-import { twMerge } from 'tailwind-merge'
+
+import { cn } from '../../utils/cn'
 
 type InputPrefixProps = ComponentProps<'div'>
 
@@ -20,19 +21,18 @@ export function Control(props: InputControlProps) {
 
 type InputRootProps = ComponentProps<'div'> & {
   rounded?: boolean
+  className?: string
 }
 
-export function Root(props: InputRootProps) {
-  const { rounded, className, ...rest } = props
-
+export function Root({ className, rounded, ...props }: InputRootProps) {
   return (
     <div
-      className={twMerge(
+      className={cn(
         'flex w-full items-center gap-2 rounded-full border border-zinc-300 px-3 py-2 font-inter text-sm leading-6 text-tertiary',
         rounded && 'rounded-xl',
         className,
       )}
-      {...rest}
+      {...props}
     />
   )
 }
