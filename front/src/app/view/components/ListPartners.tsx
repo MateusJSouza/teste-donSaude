@@ -1,7 +1,7 @@
 import { PlusCircle } from '@phosphor-icons/react'
 import { Link } from 'react-router-dom'
 
-import { partners } from '../../../mocks/partners'
+import { partner } from '../../../mocks/partner'
 
 import { Button } from './Button'
 import { columns } from './Table/Partners/columns'
@@ -23,7 +23,7 @@ export function ListPartners() {
         </Button>
       </div>
 
-      <PartnerDataTable columns={columns} data={partners} />
+      <PartnerDataTable columns={columns} data={partner} />
     </>
   )
 }

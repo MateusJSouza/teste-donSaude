@@ -1,7 +1,7 @@
 import { ArrowsDownUp } from '@phosphor-icons/react'
 import { ColumnDef } from '@tanstack/react-table'
 
-import { Partner } from '../../../../../mocks/partners'
+import { Partner } from '../../../../../mocks/partner'
 import { formatIdentity } from '../../../../utils/formatIdentity'
 import { formatPhone } from '../../../../utils/formatPhone'
 
