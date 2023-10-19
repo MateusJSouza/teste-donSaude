@@ -1,4 +1,4 @@
-import { CaretLeft, Check } from '@phosphor-icons/react'
+import { Check } from '@phosphor-icons/react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -21,25 +21,18 @@ export function PartnerFormInfo() {
   }
 
   return (
-    <>
-      <div className="mb-8 flex items-center gap-1">
-        <Link to="/">
-          <CaretLeft className="h-5 w-5 cursor-pointer" />
-        </Link>
-        <h1 className="text-2xl font-bold text-content">Novo parceiro</h1>
-      </div>
-
-      <main className="rounded-2xl bg-white p-7">
-        <div className="grid grid-cols-2 gap-4 rounded-2xl border p-1">
-          <button
-            type="button"
-            disabled={!isInfoEnabled}
-            className={cn(
-              'flex items-center justify-center gap-1 rounded-full px-3 py-2',
-              isInfoEnabled ? 'bg-primary-light' : 'bg-transparent ',
-            )}
-            onClick={handleInfoClick}
-          >
+    <div>
+      <div className="grid grid-cols-2 gap-4 rounded-2xl border p-1">
+        <button
+          type="button"
+          disabled={!isInfoEnabled}
+          className={cn(
+            'flex items-center justify-center gap-1 rounded-full px-3 py-2',
+            isInfoEnabled ? 'bg-primary-light' : 'bg-transparent ',
+          )}
+          onClick={handleInfoClick}
+        >
+          <Link className="flex gap-2" to="/info">
             <div
               className={cn(
                 'flex h-4 w-4 items-center justify-center rounded-full',
@@ -60,16 +53,18 @@ export function PartnerFormInfo() {
             >
               Informações
             </span>
-          </button>
-          <button
-            type="button"
-            disabled={!isAddressEnabled}
-            className={cn(
-              'flex items-center justify-center gap-1 rounded-full px-3 py-2',
-              isAddressEnabled ? 'bg-primary-light' : 'bg-transparent',
-            )}
-            onClick={handleAddressClick}
-          >
+          </Link>
+        </button>
+        <button
+          type="button"
+          disabled={!isAddressEnabled}
+          className={cn(
+            'flex items-center justify-center gap-1 rounded-full px-3 py-2',
+            isAddressEnabled ? 'bg-primary-light' : 'bg-transparent',
+          )}
+          onClick={handleAddressClick}
+        >
+          <Link className="flex gap-2" to="/info">
             <div
               className={cn(
                 'flex h-4 w-4 items-center justify-center rounded-full',
@@ -93,11 +88,11 @@ export function PartnerFormInfo() {
             >
               Endereços
             </span>
-          </button>
-        </div>
+          </Link>
+        </button>
+      </div>
 
-        <NewPartnerForm />
-      </main>
-    </>
+      <NewPartnerForm />
+    </div>
   )
 }
