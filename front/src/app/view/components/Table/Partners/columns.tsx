@@ -16,7 +16,7 @@ export const columns: ColumnDef<Partner>[] = [
     header: ({ column }) => (
       <button
         type="button"
-        className="flex items-center gap-2"
+        className="flex items-center gap-1"
         onClick={() => {
           column.toggleSorting(column.getIsSorted() === 'asc')
         }}
@@ -32,7 +32,7 @@ export const columns: ColumnDef<Partner>[] = [
     header: ({ column }) => (
       <button
         type="button"
-        className="flex items-center gap-2"
+        className="flex items-center gap-1"
         onClick={() => {
           column.toggleSorting(column.getIsSorted() === 'asc')
         }}
@@ -46,7 +46,7 @@ export const columns: ColumnDef<Partner>[] = [
         <p className="cursor-pointer text-[10px] font-medium text-secondary">{`${row.original.name}`}</p>
         <span className="cursor-pointer text-[7px] font-medium text-secondary">{`${formatIdentity(
           row.original.identityNumber,
-        )}`}</span>
+        )} | Titular`}</span>
       </div>
     ),
   },

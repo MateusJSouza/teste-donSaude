@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { MagnifyingGlass } from '@phosphor-icons/react'
+import { CaretLeft, CaretRight, MagnifyingGlass } from '@phosphor-icons/react'
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -13,6 +13,7 @@ import {
 } from '@tanstack/react-table'
 import { useState } from 'react'
 
+import { Button } from '../../Button'
 import * as Input from '../../Input'
 
 interface DataTableProps<TData, TValue> {
@@ -46,7 +47,7 @@ export function PartnerDataTable<TData, TValue>({
   return (
     <div className="divide-y divide-gray-200 overflow-x-auto rounded-2xl bg-white">
       <div className="px-4 pb-2 pt-3">
-        {/* Sorting Table */}
+        {/* Search Partner */}
         <Input.Root className="max-w-sm">
           <Input.Prefix>
             <MagnifyingGlass className="h-5 w-5 text-tertiary" />
@@ -104,20 +105,54 @@ export function PartnerDataTable<TData, TValue>({
       </table>
 
       {/* Pagination */}
-      <div className="flex items-center gap-2 p-5">
-        <span className="text-[10px] font-medium text-tertiary">Mostrando</span>
-        <select
-          id="pages"
-          className="block w-12 rounded-full border border-gray-300 bg-gray-50 px-2 py-1 text-[8px] text-content focus:border-blue-500 focus:ring-blue-500"
-        >
-          <option selected>10</option>
-          <option value="2">25</option>
-          <option value="3">30</option>
-        </select>
+      <div className="flex items-center justify-between p-5">
+        <div className="flex items-center gap-2">
+          <span className="text-[10px] font-medium text-tertiary">
+            Mostrando
+          </span>
+          <select
+            id="pages"
+            value={table.getState().pagination.pageSize}
+            onChange={(e) => table.setPageSize(Number(e.target.value))}
+            className="block w-12 rounded-full border border-gray-300 bg-gray-50 px-2 py-1 text-[8px] text-content focus:border-blue-500 focus:ring-blue-500"
+          >
+            {[10, 20, 30, 40, 50].map((pageSize) => (
+              <option key={pageSize} value={pageSize}>
+                {pageSize}
+              </option>
+            ))}
+          </select>
 
-        <span className="text-[10px] font-medium text-tertiary">
-          de <strong className="text-content">432</strong> resultados
-        </span>
+          <span className="text-[10px] font-medium text-tertiary">
+            de{' '}
+            <strong className="text-content">
+              {table.getCoreRowModel().rows.length}
+            </strong>{' '}
+            resultados
+          </span>
+        </div>
+
+        <div className="flex items-center">
+          <Button
+            onClick={() => table.previousPage()}
+            disabled={!table.getCanPreviousPage()}
+            variant="ghost"
+            className="disabled:cursor-not-allowed"
+          >
+            <CaretLeft className="h-3 w-3 text-content" weight="bold" />
+          </Button>
+          <p className="text-[10px] font-medium text-tertiary">
+            {table.getState().pagination.pageIndex + 1}
+          </p>
+          <Button
+            variant="ghost"
+            onClick={() => table.nextPage()}
+            disabled={!table.getCanNextPage()}
+            className="disabled:cursor-not-allowed"
+          >
+            <CaretRight className="h-3 w-3 text-content" weight="bold" />
+          </Button>
+        </div>
       </div>
     </div>
   )
