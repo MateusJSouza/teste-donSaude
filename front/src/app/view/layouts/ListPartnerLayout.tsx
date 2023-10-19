@@ -11,7 +11,7 @@ export function ListPartnerLayout() {
       <main className="flex flex-col">
         <Header />
 
-        <div className="flex-grow rounded-2xl bg-shape-secondary px-12 pb-4 pt-8 sm:px-6 sm:pt-6">
+        <div className="flex-grow rounded-tl-xl bg-shape-secondary px-12 pb-4 pt-8 sm:px-6 sm:pt-6">
           <Outlet />
         </div>
       </main>
