@@ -1,4 +1,9 @@
-import { ArrowsDownUp } from '@phosphor-icons/react'
+import {
+  ArrowsDownUp,
+  ClipboardText,
+  PencilSimpleLine,
+  Trash,
+} from '@phosphor-icons/react'
 import { ColumnDef } from '@tanstack/react-table'
 
 import { Partner } from '../../../../../mocks/partner'
@@ -38,8 +43,8 @@ export const columns: ColumnDef<Partner>[] = [
     ),
     cell: ({ row }) => (
       <div className="flex flex-col items-start justify-start">
-        <p className="text-[10px] font-medium text-content">{`${row.original.name}`}</p>
-        <span className="text-[7px] font-medium text-secondary">{`${formatIdentity(
+        <p className="cursor-pointer text-[10px] font-medium text-secondary">{`${row.original.name}`}</p>
+        <span className="cursor-pointer text-[7px] font-medium text-secondary">{`${formatIdentity(
           row.original.identityNumber,
         )}`}</span>
       </div>
@@ -65,5 +70,14 @@ export const columns: ColumnDef<Partner>[] = [
   {
     accessorKey: 'actions',
     header: () => <span className="text-[10px] font-medium">Ações</span>,
+    cell: () => {
+      return (
+        <div className="flex gap-3">
+          <Trash className="h-4 w-4 cursor-pointer text-secondary" />
+          <PencilSimpleLine className="h-4 w-4 cursor-pointer text-secondary" />
+          <ClipboardText className="h-4 w-4 cursor-pointer text-secondary" />
+        </div>
+      )
+    },
   },
 ]
