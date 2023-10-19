@@ -1,6 +1,5 @@
 import { Check } from '@phosphor-icons/react'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 
 import { cn } from '../../utils/cn'
 
@@ -32,28 +31,26 @@ export function PartnerFormInfo() {
           )}
           onClick={handleInfoClick}
         >
-          <Link className="flex gap-2" to="/info">
-            <div
-              className={cn(
-                'flex h-4 w-4 items-center justify-center rounded-full',
-                isInfoEnabled ? 'bg-primary' : 'bg-success',
-              )}
-            >
-              {isInfoEnabled ? (
-                <p className="text-[8px] font-medium text-white">1</p>
-              ) : (
-                <Check size={6} />
-              )}
-            </div>
-            <span
-              className={cn(
-                'text-[10px] font-medium leading-normal',
-                isInfoEnabled ? 'text-primary' : 'text-tertiary',
-              )}
-            >
-              Informações
-            </span>
-          </Link>
+          <div
+            className={cn(
+              'flex h-4 w-4 items-center justify-center rounded-full',
+              isInfoEnabled ? 'bg-primary' : 'bg-success',
+            )}
+          >
+            {isInfoEnabled ? (
+              <p className="text-[8px] font-medium text-white">1</p>
+            ) : (
+              <Check size={6} />
+            )}
+          </div>
+          <span
+            className={cn(
+              'text-[10px] font-medium leading-normal',
+              isInfoEnabled ? 'text-primary' : 'text-tertiary',
+            )}
+          >
+            Informações
+          </span>
         </button>
         <button
           type="button"
@@ -64,31 +61,29 @@ export function PartnerFormInfo() {
           )}
           onClick={handleAddressClick}
         >
-          <Link className="flex gap-2" to="/info">
-            <div
+          <div
+            className={cn(
+              'flex h-4 w-4 items-center justify-center rounded-full',
+              isAddressEnabled ? 'bg-primary' : 'bg-zinc-300',
+            )}
+          >
+            <p
               className={cn(
-                'flex h-4 w-4 items-center justify-center rounded-full',
-                isAddressEnabled ? 'bg-primary' : 'bg-zinc-300',
+                'text-[8px] font-medium',
+                isAddressEnabled ? 'text-white' : 'text-content',
               )}
             >
-              <p
-                className={cn(
-                  'text-[8px] font-medium',
-                  isAddressEnabled ? 'text-white' : 'text-content',
-                )}
-              >
-                1
-              </p>
-            </div>
-            <span
-              className={cn(
-                'text-[10px] font-medium leading-normal',
-                isAddressEnabled ? 'text-primary' : 'text-tertiary',
-              )}
-            >
-              Endereços
-            </span>
-          </Link>
+              1
+            </p>
+          </div>
+          <span
+            className={cn(
+              'text-[10px] font-medium leading-normal',
+              isAddressEnabled ? 'text-primary' : 'text-tertiary',
+            )}
+          >
+            Endereços
+          </span>
         </button>
       </div>
 
