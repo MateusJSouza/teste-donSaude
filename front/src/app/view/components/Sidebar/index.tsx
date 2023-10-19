@@ -6,6 +6,7 @@ import {
   UsersFour,
   Wallet,
 } from '@phosphor-icons/react'
+import { Link } from 'react-router-dom'
 
 import { IconFooter } from '../icons/IconFooter'
 import { LogoIcon } from '../icons/LogoIcon'
@@ -15,9 +16,9 @@ import { NavItem } from './NavItem'
 export function Sidebar() {
   return (
     <aside className="sticky top-0 flex max-h-[100vh] flex-col bg-white px-6 py-[26px]">
-      <div className="flex items-center justify-center">
+      <Link to="/" className="flex items-center justify-center">
         <LogoIcon />
-      </div>
+      </Link>
 
       <div className="mt-14 flex flex-col gap-6">
         <NavItem icon={ChartPie} title="Indicadores" />
