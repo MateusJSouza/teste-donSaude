@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import { Button } from '../Button'
 import * as Input from '../Input'
 import { Label } from '../Label'
@@ -98,7 +100,9 @@ export function NewPartnerForm() {
         <Button variant="ghost" className="px-20 py-[10px]">
           Cancelar
         </Button>
-        <Button className="px-[94px] py-[10px]">Próxima</Button>
+        <Link to="/address">
+          <Button className="px-[94px] py-[10px]">Próxima</Button>
+        </Link>
       </div>
     </form>
   )
