@@ -11,6 +11,7 @@ import {
   useReactTable
 } from '@tanstack/react-table'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import { Button } from '../../Button'
 import * as Input from '../../Input'
@@ -44,7 +45,7 @@ export function AddressDataTable<TData, TValue>({
 
   return (
     <div className="divide-y divide-gray-200 overflow-x-auto rounded-2xl bg-white">
-      <div className="px-4 pb-2 pt-3 flex justify-between items-center">
+      <div className="pb-2 pt-3 flex justify-between items-center">
         {/* Search Address */}
         <Input.Root className="max-w-sm">
           <Input.Prefix>
@@ -108,6 +109,17 @@ export function AddressDataTable<TData, TValue>({
           })}
         </tbody>
       </table>
+
+      <div className="pt-8 flex items-center justify-end gap-3">
+        <Link to="/partner/new/info">
+          <Button variant="ghost" className="px-20 py-[10px]">
+            Cancelar
+          </Button>
+        </Link>
+        <Link to="/">
+          <Button className="px-[94px] py-[10px]">Finalizar</Button>
+        </Link>
+      </div>
     </div>
   )
 }
