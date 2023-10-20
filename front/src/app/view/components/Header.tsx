@@ -29,7 +29,7 @@ export function Header() {
         </Input.Root>
       </div>
 
-      <div className="flex items-center justify-center gap-4">
+      <div className="hidden md:items-center lg:flex lg:justify-center lg:gap-4">
         <div className="flex items-center gap-8">
           <Star className="cursor-pointer" />
 
