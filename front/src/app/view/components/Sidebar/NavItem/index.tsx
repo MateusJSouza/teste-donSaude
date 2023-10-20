@@ -20,7 +20,7 @@ export function NavItem({ title, isSelect, icon: Icon }: NavItemProps) {
       {isSelect && (
         <CaretDown
           size={10}
-          className="text-zinc-500 transition-colors group-hover:text-white"
+          className="ml-auto text-zinc-500 transition-colors group-hover:text-white"
         />
       )}
     </a>
