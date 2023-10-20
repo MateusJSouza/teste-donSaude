@@ -8,9 +8,10 @@ const button = tv({
 
   variants: {
     variant: {
-      primary: 'bg-primary rounded-full text-white',
+      primary: 'bg-razzmatazz-700 text-white',
       secondary: 'bg-primary-light text-primary border-transparent',
-      ghost: 'bg-transparent text-secondary',
+      ghost:
+        'bg-transparent text-secondary hover:bg-zinc-800/20 transition-colors',
     },
   },
 

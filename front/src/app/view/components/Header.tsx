@@ -39,7 +39,7 @@ export function Header() {
         <div className="h-8 w-px bg-zinc-200" />
 
         <div className="flex cursor-pointer items-center justify-center rounded-full border border-transparent bg-primary-light p-2">
-          <User className="text-primary" />
+          <User className="text-razzmatazz-700" />
         </div>
       </div>
     </header>

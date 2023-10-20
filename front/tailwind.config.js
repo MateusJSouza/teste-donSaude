@@ -17,7 +17,6 @@ export default {
         app: '14rem 1fr',
       },
       colors: {
-        primary: '#D0005E',
         'primary-light': '#FFF0F7',
         content: '#101828',
         screen: '#F2F4F7',
@@ -25,6 +24,11 @@ export default {
         'shape-secondary': '#EAECF0',
         secondary: '#475467',
         success: '#C2ED79',
+
+        razzmatazz: {
+          700: '#d0005e',
+          900: '#920945',
+        },
       },
     },
   },

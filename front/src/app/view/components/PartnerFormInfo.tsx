@@ -34,7 +34,7 @@ export function PartnerFormInfo() {
           <div
             className={cn(
               'flex h-4 w-4 items-center justify-center rounded-full',
-              isInfoEnabled ? 'bg-primary' : 'bg-success',
+              isInfoEnabled ? 'bg-razzmatazz-700' : 'bg-success',
             )}
           >
             {isInfoEnabled ? (
@@ -64,7 +64,7 @@ export function PartnerFormInfo() {
           <div
             className={cn(
               'flex h-4 w-4 items-center justify-center rounded-full',
-              isAddressEnabled ? 'bg-primary' : 'bg-zinc-300',
+              isAddressEnabled ? 'bg-razzmatazz-700' : 'bg-zinc-300',
             )}
           >
             <p

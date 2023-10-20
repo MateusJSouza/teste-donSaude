@@ -38,14 +38,14 @@ export function PartnerFormAddress() {
         >
           <div
             className={cn(
-              'flex h-4 w-4 items-center justify-center rounded-full bg-primary',
+              'bg-razzmatazz-700 flex h-4 w-4 items-center justify-center rounded-full',
             )}
           >
             <p className={cn('text-[8px] font-medium text-white')}>1</p>
           </div>
           <span
             className={cn(
-              'text-[10px] font-medium leading-normal text-primary',
+              'text-razzmatazz-700 text-[10px] font-medium leading-normal',
             )}
           >
             Endereços
