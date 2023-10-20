@@ -8,7 +8,7 @@ import { AddressDataTable } from '../Table/Address/data-table'
 export function PartnerFormAddress() {
   return (
     <div>
-      <div className="grid grid-cols-2 gap-4 rounded-2xl border p-1">
+      <div className="flex flex-col gap-4 rounded-2xl border p-1 md:grid md:grid-cols-2">
         <button
           type="button"
           className={cn(

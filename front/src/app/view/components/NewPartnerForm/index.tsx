@@ -9,7 +9,7 @@ import { SelectWithDropdown } from '../SelectWithDropdown'
 export function NewPartnerForm() {
   return (
     <form className="mt-6 font-inter">
-      <div className="grid grid-cols-2 gap-4">
+      <div className="flex flex-col gap-4 md:grid md:grid-cols-2">
         <div className="flex flex-col">
           <Label>Categoria</Label>
 
@@ -96,12 +96,12 @@ export function NewPartnerForm() {
         </div>
       </div>
 
-      <div className="mt-8 flex items-center justify-end gap-3">
-        <Button variant="ghost" className="px-20 py-[10px]">
+      <div className="mt-8 flex items-center justify-center gap-3 md:justify-end">
+        <Button variant="ghost" className="px-10 py-2 md:px-20 md:py-[10px]">
           Cancelar
         </Button>
         <Link to="/partner/new/address">
-          <Button className="px-[94px] py-[10px]">Próxima</Button>
+          <Button className="px-10 py-2 md:px-20 md:py-[10px]">Próxima</Button>
         </Link>
       </div>
     </form>
