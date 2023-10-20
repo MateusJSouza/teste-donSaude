@@ -61,7 +61,7 @@ export function PartnerDataTable<TData, TValue>({
           />
         </Input.Root>
       </div>
-      <table className="min-w-full divide-y divide-gray-200">
+      <table className="min-w-full divide-y divide-gray-200 overflow-x-auto">
         <thead>
           {table.getHeaderGroups().map((headerEl) => (
             <tr key={headerEl.id}>
@@ -79,10 +79,11 @@ export function PartnerDataTable<TData, TValue>({
                       columnEl.getContext(),
                     )}
                 </th>
-              ))}
-            </tr>
+              ))
+              }
+            </tr >
           ))}
-        </thead>
+        </thead >
         <tbody className="divide-y divide-gray-200 bg-white">
           {table.getRowModel().rows.map((rowEl) => {
             return (
@@ -102,10 +103,10 @@ export function PartnerDataTable<TData, TValue>({
             )
           })}
         </tbody>
-      </table>
+      </table >
 
       {/* Pagination */}
-      <div className="flex items-center justify-between p-5">
+      < div className="flex items-center justify-between p-5" >
         <div className="flex items-center gap-2">
           <span className="text-[10px] font-medium text-tertiary">
             Mostrando
@@ -153,7 +154,7 @@ export function PartnerDataTable<TData, TValue>({
             <CaretRight className="h-3 w-3 text-content" weight="bold" />
           </Button>
         </div>
-      </div>
-    </div>
+      </div >
+    </div >
   )
 }
