@@ -79,11 +79,10 @@ export function PartnerDataTable<TData, TValue>({
                       columnEl.getContext(),
                     )}
                 </th>
-              ))
-              }
-            </tr >
+              ))}
+            </tr>
           ))}
-        </thead >
+        </thead>
         <tbody className="divide-y divide-gray-200 bg-white">
           {table.getRowModel().rows.map((rowEl) => {
             return (
@@ -103,10 +102,10 @@ export function PartnerDataTable<TData, TValue>({
             )
           })}
         </tbody>
-      </table >
+      </table>
 
       {/* Pagination */}
-      < div className="flex items-center justify-between p-5" >
+      <div className="flex items-center justify-between p-5">
         <div className="flex items-center gap-2">
           <span className="text-[10px] font-medium text-tertiary">
             Mostrando
@@ -138,7 +137,7 @@ export function PartnerDataTable<TData, TValue>({
             onClick={() => table.previousPage()}
             disabled={!table.getCanPreviousPage()}
             variant="ghost"
-            className="disabled:cursor-not-allowed"
+            className="disabled:cursor-not-allowed hover:bg-transparent"
           >
             <CaretLeft className="h-3 w-3 text-content" weight="bold" />
           </Button>
@@ -149,12 +148,15 @@ export function PartnerDataTable<TData, TValue>({
             variant="ghost"
             onClick={() => table.nextPage()}
             disabled={!table.getCanNextPage()}
-            className="disabled:cursor-not-allowed"
+            className="disabled:cursor-not-allowed hover:bg-transparent"
           >
-            <CaretRight className="h-3 w-3 text-content" weight="bold" />
+            <CaretRight
+              className="h-3 w-3 text-content"
+              weight="bold"
+            />
           </Button>
         </div>
-      </div >
-    </div >
+      </div>
+    </div>
   )
 }
